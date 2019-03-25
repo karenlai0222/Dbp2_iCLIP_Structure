@@ -25,13 +25,12 @@ all.rna <- read.delim("R64-2-1_yeast_id_name.txt", as.is = T)
 all.rna.gr <- GRanges(seqnames = Rle(all.rna$chromosome),
                       ranges = IRanges(start = all.rna$start, end = all.rna$end),
                       strand = Rle(all.rna$strand), id = all.rna$id, seqlengths = yeast.length)
-lncrna <- read.delim("010417_all_lncRNA_merged.txt", as.is = T)
+lncrna <- read.delim("All_lncRNA_merged.txt", as.is = T)
 lncrna.gr <- GRanges(seqnames = Rle(lncrna$chromosome),
                      ranges = IRanges(start = lncrna$start, end = lncrna$end),
                      strand = Rle(lncrna$strand), id = lncrna$ID, seqlengths = yeast.length)
 
-##### get bam file names
-setwd("/depot/ejtran/data/iCLIP/From_Nadia")
+##### Get bam file names
 bam.files <- c("Dbp2_1.sorted.twoMatches.bam", "Dbp2_2.sorted.twoMatches.bam", "Dbp2_3.sorted.twoMatches.bam")
 
 ##### parameters for scanBam
