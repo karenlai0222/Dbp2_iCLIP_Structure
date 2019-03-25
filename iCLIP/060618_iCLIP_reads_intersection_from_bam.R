@@ -1,11 +1,10 @@
 ##########
 ##### This is to find the reads that are overlapping in all 3 replicates, based on the BAM files
-###   (allowing two mapping sites, from Nadia)
 ##########
 ##### The purpose of using the original bam file is to take spliced/unspliced reads into consideration
-### Also, this time the UTR regions are taken into account
+### Also, the UTR regions are taken into account
 
-##### This is run on snyder
+##### This is run on cluster interactively
 
 library(Rsamtools)
 library(GenomicRanges)
@@ -15,11 +14,12 @@ sc.bs3 <- BSgenome.Scerevisiae.UCSC.sacCer3
 yeast.length <- seqlengths(sc.bs3)
 
 ##### Generate GRanges for protein coding genes (SGD R64-2-1)
-yn.utr <- read.delim("062216_Yassour_Nagalakshmi_outermost_UTR.txt", as.is = T, header = T)
+yn.utr <- read.delim("CDS_UTR_coordinates.txt", as.is = T, header = T)
 yn.utr.gr <- GRanges(seqnames = Rle(yn.utr$chromosome),
                      ranges = IRanges(start = yn.utr$transcript.start, end = yn.utr$transcript.end),
                      strand = Rle(yn.utr$strand), id = yn.utr$id, seqlengths = yeast.length)
 yn.utr.gr <- trim(yn.utr.gr)
+
 ##### Also generate Granges for lncRNAs and all possible RNAs
 all.rna <- read.delim("R64-2-1_yeast_id_name.txt", as.is = T)
 all.rna.gr <- GRanges(seqnames = Rle(all.rna$chromosome),
