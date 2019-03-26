@@ -13,4 +13,7 @@
    - Transcripts that had less than 5 counts in each library were filtered from the analysis.  
    - Only transcripts that were identified in all three replicates were regarded as binding targets.  
    - A pie chart can be made based on the data from this step (Dbp2iCLIP_SitesFromFilteredReads_distribution.R)
-10. 
+10. Meta-analysis of Dbp2 binding sites  
+   - Doing three replicates separately (iCLIP_D21_meta_mRNAsBound_FilteredSites.R; iCLIP_D22_meta_mRNAsBound_FilteredSites.R; iCLIP_D23_meta_mRNAsBound_FilteredSites.R)  
+   - Combining three replicates after normalization
+
