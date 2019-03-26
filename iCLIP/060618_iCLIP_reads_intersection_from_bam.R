@@ -54,11 +54,11 @@ sample.names <- c("D21", "D22", "D23")
 D21.bam.ga <- readGAlignments(bam.files[1], param = my.param) ### 19961599 alignments
 ## only use the reads that pass through the flag score
 D21.good.reads <- which(mcols(D21.bam.ga)$flag %in% good.flags)
-D21.bam.ga <- D21.bam.ga[D21.good.reads] ### still the same number of alignments; the filtering is not neccessary (Nadia might have done it) 
+D21.bam.ga <- D21.bam.ga[D21.good.reads] ### still the same number of alignments; the filtering is not neccessary
 ### D22
 D22.bam.ga <- readGAlignments(bam.files[2], param = my.param) ### 17845843 alignments
 ### D23
-D23.bam.ga <- readGAlignments(bam.files[3], param = my.param) ### 25253224 reads
+D23.bam.ga <- readGAlignments(bam.files[3], param = my.param) ### 25253224 alignments
 
 ##### Filter out reads that cover abnormal length on the chromosome (too long)
 ### Find out the reasonable lengths of transcripts
@@ -114,7 +114,7 @@ D3.inter12.reads <- unique(D3.inter12.index.df$id)
 length(D3.inter12.reads) ### 24920578 reads kept (originally in D23.filt.gr: 25187733, less than 1% was not kept)
 ## Output the reads
 write.table(D3.inter12.index.df2,
-            file = "/scratch/snyder/l/lai64/060618_Dbp2iCLIPdata_reprocessing/Filtered_Dbp2iCLIPreads/060618_Dbp23_iCLIPreads_reproduced.txt",
+            file = "060618_Dbp23_iCLIPreads_reproduced.txt",
             quote = F, sep = "\t", row.names = F)
 
 ##### Find the intersection between D21 and D23 samples, and use these ranges to filter D22 reads
@@ -137,7 +137,7 @@ D2.inter13.reads <- unique(D2.inter13.index.df$id)
 length(D2.inter13.reads) ### 17663576 (originally in D22.filt.gr: 17780376)
 ## Output the reads
 write.table(D2.inter13.index.df2,
-            file = "/scratch/snyder/l/lai64/060618_Dbp2iCLIPdata_reprocessing/Filtered_Dbp2iCLIPreads/060618_Dbp22_iCLIPreads_reproduced.txt",
+            file = "060618_Dbp22_iCLIPreads_reproduced.txt",
             quote = F, sep = "\t", row.names = F)
 
 ##### Find the intersection between D22 and D23 samples, and use these ranges to filter D21 reads
@@ -160,7 +160,7 @@ D1.inter23.reads <- unique(D1.inter23.index.df$id)
 length(D1.inter23.reads) ### 19676903 (originally in D21.filt.gr: 19931680)
 ## Output the reads
 write.table(D1.inter23.index.df2,
-            file = "/scratch/snyder/l/lai64/060618_Dbp2iCLIPdata_reprocessing/Filtered_Dbp2iCLIPreads/060618_Dbp21_iCLIPreads_reproduced.txt",
+            file = "060618_Dbp21_iCLIPreads_reproduced.txt",
             quote = F, sep = "\t", row.names = F)
 
 
