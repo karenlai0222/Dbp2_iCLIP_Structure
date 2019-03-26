@@ -1,12 +1,10 @@
 
 ##########
-##### This is to do the metagene analysis based on the script from Siwen
+##### This is to do the metagene analysis
 ##### The goal is to find out the distribution of Dbp2-binding sites on all Dbp2-binding mRNAs
 #########
-##### Notes: the number of bins for each region is porportional to their median length
 ### This script focuses on sample Dbp2-1
-### The binding sites used here are revised in June 2018
-##### This script is run on Snyder because the files are big
+### This script is run on cluster because the files are big
 
 library(Rsamtools)
 library(GenomicRanges)
@@ -16,11 +14,11 @@ sc.bs3 <- BSgenome.Scerevisiae.UCSC.sacCer3
 yeast.length <- seqlengths(sc.bs3)
 
 ##### Read in Dbp2-binding mRNAs
-dbp2.mRNA <- read.delim("Dbp2iCLIP_sitesFromReproducedReads/060718_Dbp2iCLIP_SitesFromIntersectedReads_countMat_for_kept_mRNAs.txt",
+dbp2.mRNA <- read.delim("060718_Dbp2iCLIP_SitesFromIntersectedReads_countMat_for_kept_mRNAs.txt",
                         quote = "", as.is = T)
 
 ##### Read in the site file (this script only focuses on Dbp2-iCLIP replicate 1)
-D21.all.sites <- read.delim("Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp21_intersectedReads_allxlinkingSites.txt",
+D21.all.sites <- read.delim("060618_iCLIP_Dbp21_intersectedReads_allxlinkingSites.txt",
                             quote = "", as.is = T)
 D21.site.gr <- GRanges(seqnames = Rle(D21.all.sites$chr),
                        ranges = IRanges(start = D21.all.sites$D1_xlinking_site, end = D21.all.sites$D1_xlinking_site),
@@ -28,7 +26,7 @@ D21.site.gr <- GRanges(seqnames = Rle(D21.all.sites$chr),
                        seqlengths = yeast.length)
 
 ##### Get the region information of these mRNAs
-yn.utr.k <- read.delim("071016_Yassour_Nagalakshmi_outermost_UTR.txt", quote = "", as.is = T)
+yn.utr.k <- read.delim("Yassour_Nagalakshmi_outermost_UTR.txt", quote = "", as.is = T)
 dbp2.mRNA.info <- yn.utr.k[which(yn.utr.k$id%in%rownames(dbp2.mRNA)), ]
 dim(dbp2.mRNA.info)
 ### Separate them by strandness
