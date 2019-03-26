@@ -7,4 +7,5 @@
 4. Trimming the barcode sequence from the 5' end of retained forward reads using cutadapt (v1.9.1)
 5. Mapping processed reads to the S288C reference genome (R64-2-1, from Saccharomyces Genome Database) using STAR (v2.5.2b)
 6. Reads mapped to one or two sites were kept in the SAM/BAM file. (grep 'NH:i:[1-2]' in unix)
-7. 
+7. For each replicate, reads that did not overlap with any read in the other two replicates were discarded.
+8. 
