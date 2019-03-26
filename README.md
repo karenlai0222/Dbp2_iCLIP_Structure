@@ -10,7 +10,7 @@
 7. For each replicate, reads that did not overlap with any read in the other two replicates were discarded (iCLIP_reads_intersection_from_bam.R)
 8. The nucleotide position before the start of each read was extracted from the forward reads as the crosslinking site in each replicate (Dbp2iCLIP_sites_from_all_intersected_reads.R)
 9. Assigning Dbp2 binding sites to different RNA classes (Dbp2_sites_toRNAclasses.R)
-..-Transcripts that had less than 5 counts in each library were filtered from the analysis.
-..-Only transcripts that were identified in all three replicates were regarded as binding targets.
-..-A pie chart can be made based on the data from this step (Dbp2iCLIP_SitesFromFilteredReads_distribution.R)
+  -Transcripts that had less than 5 counts in each library were filtered from the analysis.
+  -Only transcripts that were identified in all three replicates were regarded as binding targets.
+  -A pie chart can be made based on the data from this step (Dbp2iCLIP_SitesFromFilteredReads_distribution.R)
 10. 
