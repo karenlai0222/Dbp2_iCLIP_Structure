@@ -2,10 +2,9 @@
 ##########
 ##### This is to get the crosslinking sites from all the intersected reads in all replicates
 ##########
-##### This is run on Snyder
-setwd("/scratch/snyder/l/lai64/060618_Dbp2iCLIPdata_reprocessing/Filtered_Dbp2iCLIPreads")
+##### This is run on cluster
 
-##### Get the reads information
+##### Get read information
 ### Dbp2-1
 D1.over.reads <- read.delim("060618_Dbp21_iCLIPreads_reproduced.txt", quote = "", as.is = T)
 ## Get crosslinking sites
@@ -18,7 +17,7 @@ D1.reads.crick$D1_xlinking_site <- D1.reads.crick.sites
 D1.over.reads.sites <- rbind(D1.reads.watson, D1.reads.crick)
 ## Output the table
 write.table(D1.over.reads.sites,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp21_intersectedReads_allxlinkingSites.txt",
+            file = "060618_iCLIP_Dbp21_intersectedReads_allxlinkingSites.txt",
             quote = F, sep = "\t", row.names = F)
 
 ### Dbp2-2
@@ -33,7 +32,7 @@ D2.reads.crick$D2_xlinking_site <- D2.reads.crick.sites
 D2.over.reads.sites <- rbind(D2.reads.watson, D2.reads.crick)
 ## Output the table
 write.table(D2.over.reads.sites,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp22_intersectedReads_allxlinkingSites.txt",
+            file = "060618_iCLIP_Dbp22_intersectedReads_allxlinkingSites.txt",
             quote = F, sep = "\t", row.names = F)
 
 ### Dbp2-3
@@ -48,7 +47,7 @@ D3.reads.crick$D3_xlinking_site <- D3.reads.crick.sites
 D3.over.reads.sites <- rbind(D3.reads.watson, D3.reads.crick)
 ## Output the table
 write.table(D3.over.reads.sites,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp23_intersectedReads_allxlinkingSites.txt",
+            file = "060618_iCLIP_Dbp23_intersectedReads_allxlinkingSites.txt",
             quote = F, sep = "\t", row.names = F)
 
 ##########
@@ -72,7 +71,7 @@ D1.pos.count.df <- data.frame(chr = D1.pos.chr, site = D1.pos.site, strand = D1.
 dim(D1.pos.count.df) ### 136836 unique sites
 ## Output the table
 write.table(D1.pos.count.df,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp21_intersectedReads_allxlinkingSiteCounts.txt",
+            file = "060618_iCLIP_Dbp21_intersectedReads_allxlinkingSiteCounts.txt",
             quote = F, sep = "\t", row.names = F)
 
 ### Dbp2-2
@@ -91,7 +90,7 @@ D2.pos.count.df <- data.frame(chr = D2.pos.chr, site = D2.pos.site, strand = D2.
 dim(D2.pos.count.df) ### 59836 unique sites
 ## Output the table
 write.table(D2.pos.count.df,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp22_intersectedReads_allxlinkingSiteCounts.txt",
+            file = "060618_iCLIP_Dbp22_intersectedReads_allxlinkingSiteCounts.txt",
             quote = F, sep = "\t", row.names = F)
 
 ### Dbp2-3
@@ -110,7 +109,7 @@ D3.pos.count.df <- data.frame(chr = D3.pos.chr, site = D3.pos.site, strand = D3.
 dim(D3.pos.count.df) ### 109168 unique sites
 ## Output the table
 write.table(D3.pos.count.df,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_iCLIP_Dbp23_intersectedReads_allxlinkingSiteCounts.txt",
+            file = "060618_iCLIP_Dbp23_intersectedReads_allxlinkingSiteCounts.txt",
             quote = F, sep = "\t", row.names = F)
 
 ##########
@@ -133,7 +132,7 @@ dim(all.unique.sites2) ### 233264 sites in total
 all.unique.sites2.order <- all.unique.sites2[order(all.unique.sites2$chr, all.unique.sites2$site), ]
 ### Output the table
 write.table(all.unique.sites2,
-            file = "../Dbp2iCLIP_sitesFromReproducedReads/060618_Dbp2iCLIP_intersectedReads_allxlinkingSites_combined_unique.txt",
+            file = "060618_Dbp2iCLIP_intersectedReads_allxlinkingSites_combined_unique.txt",
             quote = F, row.names = F)
 
 
