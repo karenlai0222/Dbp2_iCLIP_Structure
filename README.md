@@ -23,4 +23,8 @@
 3. Determining peaks using MACS2 (v2.1.2)  
    - Using input samples as a control to find peaks (121118_MACS_myChIP_repMerged.sh)  
    - Deriving the fold enrichment as the noramlized signals shown in figures (121118_MACS_myChIP_foldEnrichment_merged.sh)
+4. Analyzing the overall RNAPII occupancy around termination sites of snoRNAs or 3' ends of mRNAs using deepTools (v3.1.1)  
+   - snoRNAs (121418_PolIIProfile_49snoRNAtermStart.sh)  
+   - mRNAs (121718_PolIIProfile_mRNA3UTRend.sh)
+   - Making figures
    
