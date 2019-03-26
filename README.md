@@ -6,6 +6,7 @@
 3. Removing PCR duplicates based on built-in random barcodes (use the script here: https://github.com/qczhang/icSHAPE/blob/master/scripts/readCollapse.pl)
 4. Trimming the barcode sequence from the 5' end of retained forward reads using cutadapt (v1.9.1)
 5. Mapping processed reads to the S288C reference genome (R64-2-1, from Saccharomyces Genome Database) using STAR (v2.5.2b)
-6. Reads mapped to one or two sites were kept in the SAM/BAM file. (grep 'NH:i:[1-2]' in unix)
-7. For each replicate, reads that did not overlap with any read in the other two replicates were discarded.
-8. 
+6. Reads mapped to one or two sites were kept in the SAM/BAM file (grep 'NH:i:[1-2]' in unix)
+7. For each replicate, reads that did not overlap with any read in the other two replicates were discarded
+8. The nucleotide position before the start of each read was extracted from the forward reads as the crosslinking site in each replicate
+9. 
