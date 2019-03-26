@@ -1,6 +1,6 @@
 # Genome-wide Discovery of DEAD-box RNA Helicase Targets Reveals RNA Structural Remodeling in Transcription Termination
 
-## Workflow for iCLIP
+## Workflow for iCLIP-seq data analysis
 1. Removing Solexa adaptors using Trimmomatic (v0.36)
 2. De-mutiplexing reads (use the script here: https://github.com/qczhang/icSHAPE/blob/master/scripts/splitFastq.pl)
 3. Removing PCR duplicates based on built-in random barcodes (use the script here: https://github.com/qczhang/icSHAPE/blob/master/scripts/readCollapse.pl)
@@ -17,4 +17,5 @@
     - Doing three replicates separately (iCLIP_D21_meta_mRNAsBound_FilteredSites.R; iCLIP_D22_meta_mRNAsBound_FilteredSites.R; iCLIP_D23_meta_mRNAsBound_FilteredSites.R)  
     - Combining three replicates after normalization (Dbp2iCLIP_meta_mRNAboundByDbp2_filteredSites_normalized_toRPKM_100bin.R)  
    
-
+## Workflow for RNAPII ChIP-seq data analysis
+1. 
