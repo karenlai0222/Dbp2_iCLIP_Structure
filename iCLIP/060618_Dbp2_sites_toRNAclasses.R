@@ -242,7 +242,7 @@ write.table(sites.sum.table, "060718_Dbp2iCLIP_SitesFromIntersectedReads_distrib
 mrnas.left <- rownames(sites.ct.filt)[which(sites.ct.filt$type=="gene")]
 length(mrnas.left) ### 2057 mRNAs are identified as binding targets
 ### Only keep those that are expressed based on our RNA-seq (in both WT and dbp2∆)
-exp.genes <- read.delim("052617_gene_list_passed_cpm_filter.txt", header = F, as.is = T)
+exp.genes <- read.delim("gene_list_passed_cpm_filter.txt", header = F, as.is = T)
 mrnas.left.exp <- mrnas.left[which(mrnas.left%in%exp.genes$V1)]
 length(mrnas.left.exp) ### 2045
 
