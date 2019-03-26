@@ -18,4 +18,9 @@
     - Combining three replicates after normalization (Dbp2iCLIP_meta_mRNAboundByDbp2_filteredSites_normalized_toRPKM_100bin.R)  
    
 ## Workflow for RNAPII ChIP-seq data analysis
-1. 
+1. Removing adaptor sequences using Trimmomatic (v0.36)
+2. Mapping reads to the S288C reference genome (R64-2-1, from Saccharomyces Genome Database) using Bowtie 2 (v2.3.3.1)
+3. Determining peaks using MACS2 (v2.1.2)  
+   - Using input samples as a control to find peaks (121118_MACS_myChIP_repMerged.sh)  
+   - Deriving the fold enrichment as the noramlized signals shown in figures (121118_MACS_myChIP_foldEnrichment_merged.sh)
+   
