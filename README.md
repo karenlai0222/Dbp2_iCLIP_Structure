@@ -15,6 +15,6 @@
    - A pie chart can be made based on the data from this step (Dbp2iCLIP_SitesFromFilteredReads_distribution.R)
 10. Meta-analysis of Dbp2 binding sites  
     - Doing three replicates separately (iCLIP_D21_meta_mRNAsBound_FilteredSites.R; iCLIP_D22_meta_mRNAsBound_FilteredSites.R; iCLIP_D23_meta_mRNAsBound_FilteredSites.R)  
-    - Combining three replicates after normalization  
+    - Combining three replicates after normalization (Dbp2iCLIP_meta_mRNAboundByDbp2_filteredSites_normalized_toRPKM_100bin.R)  
    
 
