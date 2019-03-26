@@ -16,7 +16,11 @@
 10. Meta-analysis of Dbp2 binding sites  
     - Doing three replicates separately (iCLIP_D21_meta_mRNAsBound_FilteredSites.R; iCLIP_D22_meta_mRNAsBound_FilteredSites.R; iCLIP_D23_meta_mRNAsBound_FilteredSites.R)  
     - Combining three replicates after normalization (Dbp2iCLIP_meta_mRNAboundByDbp2_filteredSites_normalized_toRPKM_100bin.R)  
-   
+
+## Workflow for Structure-seq data analysis
+1. Removing adaptor sequences using Trimmomatic (v0.36)
+2.
+
 ## Workflow for RNAPII ChIP-seq data analysis
 1. Removing adaptor sequences using Trimmomatic (v0.36)
 2. Mapping reads to the S288C reference genome (R64-2-1, from Saccharomyces Genome Database) using Bowtie 2 (v2.3.3.1)
