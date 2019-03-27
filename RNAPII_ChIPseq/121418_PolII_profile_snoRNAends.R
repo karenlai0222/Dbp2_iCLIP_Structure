@@ -35,7 +35,6 @@ wt.sno.termS.mean.norm <- (wt.sno.termS.mean/sum(wt.sno.termS.mean))*100
 dbp2.sno.termS.mean <- apply(dbp2.sno.termS.mat, 2, mean)
 dbp2.sno.termS.mean.norm <- (dbp2.sno.termS.mean/sum(dbp2.sno.termS.mean))*100
 x = seq(-490, 500, by = 10)
-setwd("~/Desktop/Research_2018to19/Code_outputs/")
 tiff("121718_PolII_49snoRNAterm.tiff", height = 4, width = 5, units = 'in', res = 600)
 par(lwd = 1, ps = 12, cex = 1)
 plot(x = x, y = wt.sno.termS.mean.norm, type = "l", col = "skyblue", lwd = 2, xlim = c(-458,470),
