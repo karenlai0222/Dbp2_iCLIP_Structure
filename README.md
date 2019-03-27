@@ -45,5 +45,5 @@ GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
 4. Analyzing the overall RNAPII occupancy around termination sites of snoRNAs or 3' ends of mRNAs using deepTools (v3.1.1)  
    - snoRNAs (121418_PolIIProfile_49snoRNAtermStart.sh)  
    - mRNAs (121718_PolIIProfile_mRNA3UTRend.sh; 121718_PolIIProfile_mRNA3UTRend_readthroughOnly.sh)
-   - Making figures in R (121418_PolII_profile_snoRNAends.R; 121418_PolII_profile_mRNA3UTR.R)
+   - Visualizing RNAPII profile around termination sites (121418_PolII_profile_snoRNAends.R; 121418_PolII_profile_mRNA3UTR.R)
    
