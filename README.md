@@ -30,7 +30,8 @@ GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
    - Only uniquely mapped reads (MAPQ = 255 after STAR alignment) were kept for the subsequent analysis  
    - Protein-coding genes (mRNAs) overlapping with at least one other gene on the same strand are not included in the following analysis (Gene_annotation_analysis.R)
 4. Get detection counts for each nucleotide  
-   - mRNAs: 
+   - mRNAs: extract_counts_mRNAs.py
+   - snoRNAs: extract_counts_snoRNAs.py
 
 
 ## Workflow for RNAPII ChIP-seq data analysis
