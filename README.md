@@ -1,5 +1,11 @@
 # Genome-wide Discovery of DEAD-box RNA Helicase Targets Reveals RNA Structural Remodeling in Transcription Termination
 
+#### The raw data used in these analysis can be found at Gene Expression Omnibus (GEO): GSE106479
+#### For detailed sequence information, please check the associated publication:
+Genome-Wide Discovery of DEAD-Box RNA Helicase Targets Reveals RNA Structural Remodeling in Transcription Termination.
+Yu-Hsuan Lai, Krishna Choudhary, Sara C. Cloutier, Zheng Xing, Sharon Aviran* and Elizabeth J. Tran*.
+GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
+
 ## Workflow for iCLIP-seq data analysis
 1. Removing Solexa adaptors using Trimmomatic (v0.36)
 2. De-mutiplexing reads (use the script here: https://github.com/qczhang/icSHAPE/blob/master/scripts/splitFastq.pl)
@@ -19,7 +25,8 @@
 
 ## Workflow for Structure-seq data analysis
 1. Removing adaptor sequences using Trimmomatic (v0.36)
-2.
+2. The random trimers were trimmed from the 5’ end of forward reads using cutadapt
+
 
 ## Workflow for RNAPII ChIP-seq data analysis
 1. Removing adaptor sequences using Trimmomatic (v0.36)
