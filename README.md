@@ -34,8 +34,7 @@ GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
    - snoRNAs: extract_counts_snoRNAs.py
 5. Calaulate reactivities  
    - mRNAs: Reactivity_analysis_mRNAs.R; generate_reactivity_files_mRNAs.R
-   - snoRNAs: 
-
+   - snoRNAs: Reactivity_analysis_snoRNAs.R; generate_reactivity_files_snoRNAs.R	
 
 ## Workflow for RNAPII ChIP-seq data analysis
 1. Removing adaptor sequences using Trimmomatic (v0.36)
