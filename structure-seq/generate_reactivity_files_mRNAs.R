@@ -1,4 +1,4 @@
-load("Reactivity.RData")
+load("Reactivity_mRNA.RData")
 
 filenames <- c("wt1.reac", "wt2.reac", "wt3.reac", "mt1.reac", "mt3.reac")
 
