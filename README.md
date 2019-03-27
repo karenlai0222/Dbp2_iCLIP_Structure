@@ -1,7 +1,7 @@
 # Genome-wide Discovery of DEAD-box RNA Helicase Targets Reveals RNA Structural Remodeling in Transcription Termination
 
-#### The raw data used in these analysis can be found at Gene Expression Omnibus (GEO): GSE106479
-#### For detailed sequence information, please check the associated publication:
+### The raw data used in these analysis can be found at Gene Expression Omnibus (GEO): GSE106479
+### For detailed sequence information, please check the associated publication:
 Genome-Wide Discovery of DEAD-Box RNA Helicase Targets Reveals RNA Structural Remodeling in Transcription Termination.
 Yu-Hsuan Lai, Krishna Choudhary, Sara C. Cloutier, Zheng Xing, Sharon Aviran* and Elizabeth J. Tran*.
 GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
@@ -25,7 +25,12 @@ GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
 
 ## Workflow for Structure-seq data analysis
 1. Removing adaptor sequences using Trimmomatic (v0.36)
-2. The random trimers were trimmed from the 5’ end of forward reads using cutadapt
+2. Trimming random trimers from the 5' end of forward reads using cutadapt (v1.9.1)
+3. Mapping processed reads to the S288C reference genome (R64-2-1, from Saccharomyces Genome Database) using STAR (v2.5.2b)  
+   - Only uniquely mapped reads (MAPQ = 255 after STAR alignment) were kept for the subsequent analysis  
+   - Protein-coding genes (mRNAs) overlapping with at least one other gene on the same strand are not included in the following analysis
+4. Get detection counts for each nucleotide  
+   - mRNAs: 
 
 
 ## Workflow for RNAPII ChIP-seq data analysis
