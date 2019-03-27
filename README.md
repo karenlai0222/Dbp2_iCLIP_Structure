@@ -29,10 +29,10 @@ GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
 3. Mapping processed reads to the S288C reference genome (R64-2-1, from Saccharomyces Genome Database) using STAR (v2.5.2b)  
    - Only uniquely mapped reads (MAPQ = 255 after STAR alignment) were kept for the subsequent analysis  
    - Protein-coding genes (mRNAs) overlapping with at least one other gene on the same strand are not included in the following analysis (Gene_annotation_analysis.R)
-4. Get detection counts for each nucleotide  
+4. Getting detection counts for each nucleotide  
    - mRNAs: extract_counts_mRNAs.py
    - snoRNAs: extract_counts_snoRNAs.py
-5. Calaulate reactivities  
+5. Calaulating reactivities  
    - mRNAs: Reactivity_analysis_mRNAs.R; generate_reactivity_files_mRNAs.R
    - snoRNAs: Reactivity_analysis_snoRNAs.R; generate_reactivity_files_snoRNAs.R	
 
