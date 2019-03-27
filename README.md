@@ -32,6 +32,9 @@ GENETICS 2019; https://doi.org/10.1534/genetics.119.302058
 4. Get detection counts for each nucleotide  
    - mRNAs: extract_counts_mRNAs.py
    - snoRNAs: extract_counts_snoRNAs.py
+5. Calaulate reactivities  
+   - mRNAs: Reactivity_analysis_mRNAs.R; generate_reactivity_files_mRNAs.R
+   - snoRNAs: 
 
 
 ## Workflow for RNAPII ChIP-seq data analysis
