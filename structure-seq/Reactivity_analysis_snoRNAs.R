@@ -112,4 +112,4 @@ coverages_all_snoRNA <- mapply(function(y) {
   mean(as.matrix(cov_AC), na.rm=T)
 }, counts_snoRNA)
 
-save.image("~/Box Sync/Tran_lab_anew/Probably_final/snoRNAs/snoRNA_reactivity.RData")
+save.image("snoRNA_reactivity.RData")
