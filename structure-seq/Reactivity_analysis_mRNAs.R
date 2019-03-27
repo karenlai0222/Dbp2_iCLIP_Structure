@@ -159,3 +159,6 @@ coverages_utr <- mcmapply(function(y) {
   cov_AC = y[AC_rows, plus_cov_columns]
   mean(as.matrix(cov_AC), na.rm=T)
 }, counts, mc.cores=parallel::detectCores()-1)
+
+save.image("Reactivity_mRNAs.RData")
+
